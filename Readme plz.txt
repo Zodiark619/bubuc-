@@ -1,1 +1,2 @@
 Portfolio 1=matchgame using WPF (contains 2 mode, exhibition mode and time attack)
+Portfolio 2=pertamina price calculator (to be updated using web api to get price information directly from its website)
