@@ -1,0 +1,18 @@
+﻿<Window x:Class="GachaSimulator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GachaSimulator"
+        mc:Ignorable="d"
+        Title="Azur Lane Gacha Simulator" Height="450" Width="800">
+    <Grid>
+        <Button Content="1x Draw" HorizontalAlignment="Left" Margin="89,77,0,0" VerticalAlignment="Top" Height="62" Width="116" Click="Button_Click1x"/>
+        <Button Content="10x Draw" HorizontalAlignment="Left" Margin="92,156,0,0" VerticalAlignment="Top" Height="65" Width="113" Click="Button_Click10x"/>
+        <ListBox x:Name="listOfShips" Margin="334,70,83,56" />
+        <Label Content="0.005% chance unique Priority Ship!! (today only)" HorizontalAlignment="Left" Margin="37,299,0,0" VerticalAlignment="Top"/>
+        <Label Content="1% Super Rare, 5% Elite, 20% Rare, 74% Common" HorizontalAlignment="Left" Margin="35,327,0,0" VerticalAlignment="Top"/>
+
+
+    </Grid>
+</Window>
