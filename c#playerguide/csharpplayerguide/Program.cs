@@ -1,13 +1,11 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using csharpplayerguide;
+using static csharpplayerguide.Part1TheBasics;
 
 
-
-
-
-
-
-Part1TheBasics.TheDefenseOfConsolas_15();
+//KnowledgeCheckCSharp_001();
+//InstallVisualStudio_002();
+HelloWorld_003();
+//TheDefenseOfConsolas_015();
 
 
 
