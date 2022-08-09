@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PickRandomCards", "babababa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GachaSimulator", "..\Portfolio\GachaSimulator\GachaSimulator.csproj", "{92CF285E-4960-4B00-9A17-E448CD09E326}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharpplayerguide", "..\c#playerguide\csharpplayerguide\csharpplayerguide.csproj", "{664A0DF2-A870-45C3-BB06-049602E41771}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "csharpplayerguide", "..\c#playerguide\csharpplayerguide\csharpplayerguide.csproj", "{664A0DF2-A870-45C3-BB06-049602E41771}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompanyEmployees", "..\ultimateaspnetcorewebapi\CompanyEmployees\CompanyEmployees.csproj", "{89BAA64D-9590-4905-9724-310FEA9D31C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{664A0DF2-A870-45C3-BB06-049602E41771}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{664A0DF2-A870-45C3-BB06-049602E41771}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{664A0DF2-A870-45C3-BB06-049602E41771}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89BAA64D-9590-4905-9724-310FEA9D31C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89BAA64D-9590-4905-9724-310FEA9D31C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89BAA64D-9590-4905-9724-310FEA9D31C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89BAA64D-9590-4905-9724-310FEA9D31C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

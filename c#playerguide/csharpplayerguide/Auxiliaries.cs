@@ -28,7 +28,7 @@ namespace csharpplayerguide
             }
             else
             {
-                Console.WriteLine($"The answer is {answer2}");
+                Console.WriteLine($"The answer is \"{answer2}\"");
             }
         }
 
@@ -44,11 +44,17 @@ namespace csharpplayerguide
 
         public static void TrueOrFalse(string answer,int answer2)
         {
+            //for wrong answer
+            string counter = answer2 == 1 ? "True" : "False";
+            
+
+           
             if (answer != "True" && answer != "False")
             {
                 Console.WriteLine("Only answer \"True\" or \"False\", you stupid peasant!");
-
+                Console.WriteLine($"The answer is {counter}");
             }
+
             if (answer == "True" && answer2 == 1)
             {
                 Console.WriteLine("The answer is right!");
@@ -57,20 +63,23 @@ namespace csharpplayerguide
             else if(answer == "True" && answer2 == 0)
                 {
                 Console.WriteLine("The answer is wrong!");
+              
 
             }
             if (answer=="False" && answer2 == 0)
             {
                 Console.WriteLine("The answer is right!");
-                
+               
+
 
             }
             else if(answer=="False"&&answer2 == 1)
                 {
                 Console.WriteLine("The answer is wrong!");
+             
 
             }
-
+            
 
 
         }
