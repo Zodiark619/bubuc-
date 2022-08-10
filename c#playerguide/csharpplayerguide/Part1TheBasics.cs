@@ -177,6 +177,15 @@ namespace csharpplayerguide
 
             Question2("What are three total egg counts where the duckbear gets more than each sister does? ", "When they are three eggs left to divide, the rest goes to duckbear. E.g. 7 will yield 3 eggs for the duckbear");
              }
+
+        public static void _014_TheDominionOfKings()
+        {
+            Console.Write("Input how many estate you got? ");int a=Convert.ToInt32(Console.ReadLine());
+            Console.Write("Input how many duchy you got? "); int b = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Input how many province you got? "); int c = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"Total points= {a*1+b*3+c*6}");
+
+        }
         public static void _015_TheDefenseOfConsolas()
         {
             Console.Write("Target Row? ");
@@ -190,6 +199,125 @@ namespace csharpplayerguide
             Console.WriteLine($"({row}, {column + 1})");
             Console.WriteLine($"({row+1}, {column })");
 
+
+        }
+        public static void _016_RepairingTheClocktower()
+        {
+            Console.Write("Input number: ");int a = Convert.ToInt32(Console.ReadLine());
+         
+                Console.WriteLine(a % 2 == 0 ? "Tick" : "Tock");
+               
+           
+        }
+        public static void _017_Watchtower()
+        {
+            string direction="";
+            Console.Write("Input x value: ");int x = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Input y value: "); int y = Convert.ToInt32(Console.ReadLine());
+            if (x < 0)
+            {
+                if (y > 0) direction = "northwest";
+                else if (y == 0) direction = "west";
+                else if (y < 0) direction = "southwest";
+
+            }else if (x == 0)
+            {
+                if (y > 0) direction = "north";
+                else if (y == 0) direction = "..., actually they're here";
+                else if (y < 0) direction = "south";
+            }
+            else
+            {
+                if (y > 0) direction = "northeast";
+                else if (y == 0) direction = "east";
+                else if (y < 0) direction = "southeast";
+            }
+
+
+            Console.WriteLine("The enemy is to the " +direction+ "!");
+        }
+        public static void _018_BuyingInventory()
+        {
+
+            string[] meong = { "Rope","Torches", "Climbing Equipment", "Clean Water", "Machete" , "Canoe" , "Food Supplies" };
+            Console.WriteLine("The following items are available:");
+            for(int i = 0; i < meong.Length; i++)
+            {
+                Console.WriteLine($"{i+1} - {meong[i]}");
+
+            }
+
+            Console.Write("What number do you want to see the price of ");int a = Convert.ToInt32(Console.ReadLine());
+
+            string response;
+            response = a switch
+            {
+                1 => $"{meong[0]} cost 10 gold",
+                2 => $"{meong[1]} costs 15 gold",
+                3 => $"{meong[2]} costs 25 gold",
+                4 => $"{meong[3]} costs 1 gold",
+                5 => $"{meong[4]} costs 20 gold",
+                6 => $"{meong[5]} costs 200 gold",
+                7 => $"{meong[6]} cost 1 gold",
+
+                _ =>"Input number from the shown list only, peasant"
+            };
+            Console.WriteLine(response);
+
+        }
+        public static void _019_DiscountedInventory()
+        {
+            Console.Write("What is your name? "); string name = Console.ReadLine();
+
+            string[] meong = { "Rope", "Torches", "Climbing Equipment", "Clean Water", "Machete", "Canoe", "Food Supplies" };
+            Console.WriteLine("The following items are available:");
+            for (int i = 0; i < meong.Length; i++)
+            {
+                Console.WriteLine($"{i + 1} - {meong[i]}");
+
+            }
+
+            Console.Write("What number do you want to see the price of "); int a = Convert.ToInt32(Console.ReadLine());
+
+            string response;
+            if (name == "bucin")
+            {
+                response = a switch
+                {
+                    1 => $"{meong[0]} cost {10/2f} gold",
+                    2 => $"{meong[1]} costs {15/2f} gold",
+                    3 => $"{meong[2]} costs {25/2f} gold",
+                    4 => $"{meong[3]} costs {1/2f} gold",
+                    5 => $"{meong[4]} costs {20/2f} gold",
+                    6 => $"{meong[5]} costs {200/2f} gold",
+                    7 => $"{meong[6]} cost {1/2f} gold",
+
+                    _ => "Input number from the shown list only, peasant"
+                };
+            }
+            else
+            {
+                response = a switch
+                {
+                    1 => $"{meong[0]} cost 10 gold",
+                    2 => $"{meong[1]} costs 15 gold",
+                    3 => $"{meong[2]} costs 25 gold",
+                    4 => $"{meong[3]} costs 1 gold",
+                    5 => $"{meong[4]} costs 20 gold",
+                    6 => $"{meong[5]} costs 200 gold",
+                    7 => $"{meong[6]} cost 1 gold",
+
+                    _ => "Input number from the shown list only, peasant"
+                };
+            }
+            
+            Console.WriteLine(response);
+        }
+
+
+
+        public static void _020_ThePrototype()
+        {
 
         }
     }
