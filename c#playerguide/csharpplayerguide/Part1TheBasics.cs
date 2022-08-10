@@ -146,7 +146,37 @@ namespace csharpplayerguide
             Console.WriteLine(m);
             Console.WriteLine(n);
         }
+        public static void _011_KnowledgeCheckTypeSystem()
+        {
+            Question("The int type can store any possible integer ",0);
+            Question2("Order the following by how large their range is, from smallest to largest: short, long, int, byte ", "byte, short, int, long");
+            Question("The byte type is signed ", 0);
+            Question2("Which can store higher numbers, int or uint? ", "uint");
+            Question2("What three types can store floating-point numbers? ", "float, double, decimal");
+            Question2("Which of the options in question 5 can hold the largest number? ","double");
+            Question2("Which of the options in question 5 is the most precise? ", "decimal");
+            Question2("What type does the literal value \"8\" (including the quotes) have? ", "string");
+            Question2("What type stores true or false values? ", "bool");
+        }
+        public static void _012_TheTriangleFarmer()
+        {
+            Console.Write("Input base size ");
+            int base_size = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Input height ");
+            int height = Convert.ToInt32(Console.ReadLine());
+            float area = base_size * height / 2;
+            Console.WriteLine($"The result of the area is {area}");
+        }
+        public static void _013_TheFourSistersAndTheDuckBear() {
+            Console.Write("How many chocolate eggs gathered today? ");
+            int choco = Convert.ToInt32(Console.ReadLine());
+            int egg_sister = choco / 4;
+            int egg_bear = choco % 4;
+            Console.WriteLine($"Each sister receives {egg_sister} egg(s)");
+            Console.WriteLine($"The duckbear receives {egg_bear} egg(s)");
 
+            Question2("What are three total egg counts where the duckbear gets more than each sister does? ", "When they are three eggs left to divide, the rest goes to duckbear. E.g. 7 will yield 3 eggs for the duckbear");
+             }
         public static void _015_TheDefenseOfConsolas()
         {
             Console.Write("Target Row? ");

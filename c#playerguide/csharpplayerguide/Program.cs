@@ -10,9 +10,11 @@ using static csharpplayerguide.Part1TheBasics;
 //_006_ConsolasAndTelim();
 //_007_TheThingNamer3000();
 //_008_KnowledgeCheckVariables();
-_009_TheVariableShop();
+//_009_TheVariableShop();
 //_010_TheVariableShopReturns();
-
+//_011_KnowledgeCheckTypeSystem();
+//_012_TheTriangleFarmer();
+_013_TheFourSistersAndTheDuckBear();
 //_015_TheDefenseOfConsolas();
 
 
