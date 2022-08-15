@@ -21,5 +21,13 @@ using static csharpplayerguide.Part1TheBasics;
 //_017_Watchtower();
 //_018_BuyingInventory();
 //_019_DiscountedInventory();
-_020_ThePrototype();
-
+//_020_ThePrototype();
+//_021_TheMagicCannon();
+//_022_TheReplicatorOfDTo();
+//_023_TheLawsOfFreach();
+//_024_TakingANumber();
+//_025_Countdown();
+//_026_KnowledgeCheckMemory();
+//_027_HuntingTheManticore();
+//_028_KnowledgeCheckObjects();
+_029_SimulaTest();

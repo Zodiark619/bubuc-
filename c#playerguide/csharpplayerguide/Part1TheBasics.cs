@@ -18,15 +18,15 @@ namespace csharpplayerguide
 
         public static void _001_KnowledgeCheckCSharp()
         {
-           
+
             Question("C# is a special-purpose language optimized for making web applications. ", 0);
-            Question2("What is the name of the framework that C# runs on? ",".NET");
+            Question2("What is the name of the framework that C# runs on? ", ".NET");
 
         }
 
         public static void _002_InstallVisualStudio()
         {
-            Console.WriteLine("If you have forked this project and read this sentence by uncommenting the \"InstallVisualStudio_002\" method and running the app, "+
+            Console.WriteLine("If you have forked this project and read this sentence by uncommenting the \"InstallVisualStudio_002\" method and running the app, " +
                 "that means your IDE has worked flawlessly, for the time being ");
         }
         public static void _003_HelloWorld()
@@ -59,25 +59,25 @@ namespace csharpplayerguide
         public static void _007_TheThingNamer3000()
         {
             Console.WriteLine("What kind of thing are we talking about?");
-            string a=Console.ReadLine();//name of item
+            string a = Console.ReadLine();//name of item
             Console.WriteLine("How would you describe it? Big? Azure? Tattered?");
-            string b=Console.ReadLine();/*what kind of item*/
+            string b = Console.ReadLine();/*what kind of item*/
             string c = "of Doom";//constant string lateral
             string d = "3000";//another constant string lateral
-            Console.WriteLine("The "+b+" "+a+" of "+c+" "+d+"!");
+            Console.WriteLine("The " + b + " " + a + " of " + c + " " + d + "!");
 
             Console.WriteLine();
-            
-             c = "Doom";//fixing the bug
-            
+
+            c = "Doom";//fixing the bug
+
             Console.WriteLine("After: The " + b + " " + a + " of " + c + " " + d + "!");
-            Question2("Aside from comments, what else could you do to make this code more understandable? ","By changing the variable name to " +
+            Question2("Aside from comments, what else could you do to make this code more understandable? ", "By changing the variable name to " +
                 "something more relatable to the purpose of the program, not just a, b, c, or d");
         }
         public static void _008_KnowledgeCheckVariables()
         {
-            Question2("Name the three things all variables have ","Type, Name, and Value");
-            Question("Variables must always be declared before being used ",1);
+            Question2("Name the three things all variables have ", "Type, Name, and Value");
+            Question("Variables must always be declared before being used ", 1);
             Question("Can you redeclare a variable? ", 0);
             Question2("Which of the following are legal C# variable names? \"answer, 1stValue, value1, $message, delete-me, delete_me, PI\" ", "answer, value1, delete_me, PI");
 
@@ -117,11 +117,11 @@ namespace csharpplayerguide
         }
         public static void _010_TheVariableShopReturns()
         {
-            float a =12f;
+            float a = 12f;
             double b = 12;
             decimal c = 123m;
             bool d = true;
-            char e ='d';
+            char e = 'd';
             string f = "d";
             byte g = 23;
             short h = 23;
@@ -148,12 +148,12 @@ namespace csharpplayerguide
         }
         public static void _011_KnowledgeCheckTypeSystem()
         {
-            Question("The int type can store any possible integer ",0);
+            Question("The int type can store any possible integer ", 0);
             Question2("Order the following by how large their range is, from smallest to largest: short, long, int, byte ", "byte, short, int, long");
             Question("The byte type is signed ", 0);
             Question2("Which can store higher numbers, int or uint? ", "uint");
             Question2("What three types can store floating-point numbers? ", "float, double, decimal");
-            Question2("Which of the options in question 5 can hold the largest number? ","double");
+            Question2("Which of the options in question 5 can hold the largest number? ", "double");
             Question2("Which of the options in question 5 is the most precise? ", "decimal");
             Question2("What type does the literal value \"8\" (including the quotes) have? ", "string");
             Question2("What type stores true or false values? ", "bool");
@@ -176,14 +176,14 @@ namespace csharpplayerguide
             Console.WriteLine($"The duckbear receives {egg_bear} egg(s)");
 
             Question2("What are three total egg counts where the duckbear gets more than each sister does? ", "When they are three eggs left to divide, the rest goes to duckbear. E.g. 7 will yield 3 eggs for the duckbear");
-             }
+        }
 
         public static void _014_TheDominionOfKings()
         {
-            Console.Write("Input how many estate you got? ");int a=Convert.ToInt32(Console.ReadLine());
+            Console.Write("Input how many estate you got? "); int a = Convert.ToInt32(Console.ReadLine());
             Console.Write("Input how many duchy you got? "); int b = Convert.ToInt32(Console.ReadLine());
             Console.Write("Input how many province you got? "); int c = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine($"Total points= {a*1+b*3+c*6}");
+            Console.WriteLine($"Total points= {a * 1 + b * 3 + c * 6}");
 
         }
         public static void _015_TheDefenseOfConsolas()
@@ -193,26 +193,26 @@ namespace csharpplayerguide
             Console.Write("Target Column? ");
             int column = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Deploy to:");
-            Console.WriteLine($"({row}, {column-1})");
-            Console.WriteLine($"({row-1}, {column })");
+            Console.WriteLine($"({row}, {column - 1})");
+            Console.WriteLine($"({row - 1}, {column})");
 
             Console.WriteLine($"({row}, {column + 1})");
-            Console.WriteLine($"({row+1}, {column })");
+            Console.WriteLine($"({row + 1}, {column})");
 
 
         }
         public static void _016_RepairingTheClocktower()
         {
-            Console.Write("Input number: ");int a = Convert.ToInt32(Console.ReadLine());
-         
-                Console.WriteLine(a % 2 == 0 ? "Tick" : "Tock");
-               
-           
+            Console.Write("Input number: "); int a = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine(a % 2 == 0 ? "Tick" : "Tock");
+
+
         }
         public static void _017_Watchtower()
         {
-            string direction="";
-            Console.Write("Input x value: ");int x = Convert.ToInt32(Console.ReadLine());
+            string direction = "";
+            Console.Write("Input x value: "); int x = Convert.ToInt32(Console.ReadLine());
             Console.Write("Input y value: "); int y = Convert.ToInt32(Console.ReadLine());
             if (x < 0)
             {
@@ -220,7 +220,7 @@ namespace csharpplayerguide
                 else if (y == 0) direction = "west";
                 else if (y < 0) direction = "southwest";
 
-            }else if (x == 0)
+            } else if (x == 0)
             {
                 if (y > 0) direction = "north";
                 else if (y == 0) direction = "..., actually they're here";
@@ -234,20 +234,20 @@ namespace csharpplayerguide
             }
 
 
-            Console.WriteLine("The enemy is to the " +direction+ "!");
+            Console.WriteLine("The enemy is to the " + direction + "!");
         }
         public static void _018_BuyingInventory()
         {
 
-            string[] meong = { "Rope","Torches", "Climbing Equipment", "Clean Water", "Machete" , "Canoe" , "Food Supplies" };
+            string[] meong = { "Rope", "Torches", "Climbing Equipment", "Clean Water", "Machete", "Canoe", "Food Supplies" };
             Console.WriteLine("The following items are available:");
-            for(int i = 0; i < meong.Length; i++)
+            for (int i = 0; i < meong.Length; i++)
             {
-                Console.WriteLine($"{i+1} - {meong[i]}");
+                Console.WriteLine($"{i + 1} - {meong[i]}");
 
             }
 
-            Console.Write("What number do you want to see the price of ");int a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("What number do you want to see the price of "); int a = Convert.ToInt32(Console.ReadLine());
 
             string response;
             response = a switch
@@ -260,7 +260,7 @@ namespace csharpplayerguide
                 6 => $"{meong[5]} costs 200 gold",
                 7 => $"{meong[6]} cost 1 gold",
 
-                _ =>"Input number from the shown list only, peasant"
+                _ => "Input number from the shown list only, peasant"
             };
             Console.WriteLine(response);
 
@@ -284,13 +284,13 @@ namespace csharpplayerguide
             {
                 response = a switch
                 {
-                    1 => $"{meong[0]} cost {10/2f} gold",
-                    2 => $"{meong[1]} costs {15/2f} gold",
-                    3 => $"{meong[2]} costs {25/2f} gold",
-                    4 => $"{meong[3]} costs {1/2f} gold",
-                    5 => $"{meong[4]} costs {20/2f} gold",
-                    6 => $"{meong[5]} costs {200/2f} gold",
-                    7 => $"{meong[6]} cost {1/2f} gold",
+                    1 => $"{meong[0]} cost {10 / 2f} gold",
+                    2 => $"{meong[1]} costs {15 / 2f} gold",
+                    3 => $"{meong[2]} costs {25 / 2f} gold",
+                    4 => $"{meong[3]} costs {1 / 2f} gold",
+                    5 => $"{meong[4]} costs {20 / 2f} gold",
+                    6 => $"{meong[5]} costs {200 / 2f} gold",
+                    7 => $"{meong[6]} cost {1 / 2f} gold",
 
                     _ => "Input number from the shown list only, peasant"
                 };
@@ -310,7 +310,7 @@ namespace csharpplayerguide
                     _ => "Input number from the shown list only, peasant"
                 };
             }
-            
+
             Console.WriteLine(response);
         }
 
@@ -318,7 +318,345 @@ namespace csharpplayerguide
 
         public static void _020_ThePrototype()
         {
+            Console.Write("User 1, enter a number between 0 and 100: "); int a = Convert.ToInt32(Console.ReadLine());
+            Console.Clear();
+            Console.Write("User 2, guess the number. ");
+            int b;
+            while (true)
+            {
+                Console.Write("What is your next guess? "); b = Convert.ToInt32(Console.ReadLine());
+                if (a == b)
+                {
+                    Console.WriteLine("You guessed the number!");
+                    break;
+                } else if (a < b)
+                {
+                    Console.WriteLine($"{b} is too high.");
+
+                }
+                else
+                {
+                    Console.WriteLine($"{b} is too low.");
+
+                }
+
+            }
 
         }
+        public static void _021_TheMagicCannon()
+        {
+            for (int i = 1; i <= 100; i++)
+            {
+                if (i % 5 == 0 && i % 3 == 0)
+                {
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.WriteLine($"{i}: Electric and Fire");
+
+                } else if (i % 5 == 0)
+                {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine($"{i}: Electric");
+
+                } else if (i % 3 == 0)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"{i}: Fire");
+
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Black;
+
+                    Console.WriteLine($"{i}: Normal");
+
+                }
+            }
+        }
+
+        public static void _022_TheReplicatorOfDTo()
+        {
+            int[] meong1 = new int[5];
+            for (int i = 0; i < 5; i++)
+            {
+                Console.Write($"Enter item number {i + 1}: ");
+                meong1[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            int[] meong2 = new int[5];
+
+            for (int i = 0; i < 5; i++)
+            {
+
+                meong2[i] = meong1[i];
+                Console.WriteLine($"Array 2 item {i + 1} is: {meong2[i]}");
+
+            }
+
+        }
+        public static void _023_TheLawsOfFreach()
+        {
+            int[] array = new int[] { 4, 51, -7, 13, -99, 15, -8, 45, 90 };
+            foreach (var i in array)
+            {
+                Console.Write(i);
+
+            }
+            int currentSmallest = array[0];
+            int total = 0;
+            foreach (var i in array)
+            {
+                if (i < currentSmallest)
+                {
+                    currentSmallest = i;
+                }
+                total += i;
+            }
+            Console.WriteLine($"Smallest value in that array: {currentSmallest}");
+
+            Console.WriteLine($"Average value in that array: {(float)total / array.Length}");
+        }
+
+        public static void _024_TakingANumber()
+        {
+            int AskForNumber(string text)
+            {
+                Console.Write(text);
+                int a = Convert.ToInt32(Console.ReadLine());
+
+                return a;
+            }
+            int AskForNumberInRange(string text, int min, int max)
+            {
+                Console.Write(text);
+                while (true)
+                {
+                    int a = Convert.ToInt32(Console.ReadLine());
+
+                    if (a > min && a < max)
+                    {
+                        Console.WriteLine("You got the answer right~");
+                        return a;
+
+                    }
+                    Console.WriteLine("Only input a number that is in range!");
+                }
+            }
+
+            int a = AskForNumber("What is the most hilarious number is Spongebob Squarepants? ");
+
+            Console.WriteLine($"The answer is {a}");
+            Console.WriteLine();
+            AskForNumberInRange("Input a number between 1 and 71 ", 1, 71);
+
+
+        }
+
+        public static void _025_Countdown()
+        {
+            int Countdown(int number)
+            {
+                if (number == 1)
+                {
+                    Console.WriteLine(number);
+                    return 1;
+                }
+                Console.WriteLine(number);
+
+                return number - Countdown(number - 1);
+
+            }
+
+            Countdown(10);
+        }
+
+        public static void _026_KnowledgeCheckMemory()
+        {
+            Question("You can access anything on the stack at any time ", 0);
+            Question("The stack keeps track of local variables ", 1);
+            Question("The contents of a value type can be placed on the heap ", 1);
+            Question("The contents of a value type are always placed on the heap ", 0);
+            Question("The contents of reference types are always placed on the heap ", 1);
+            Question("The garbage collector cleans up old, unused space on the heap and stack  ", 0);
+            Question("If a and b are array variables referencing the same object, modifying a affects b as well ", 1);
+            Question("If a and b are ints with the same value, changing a will also affect b ", 0);
+
+        }
+        public static void _027_HuntingTheManticore()
+        {
+            int CannonDamage(int round)
+            {
+                if (round % 5 == 0 && round % 3 == 0)
+                {
+                    return 10;
+                } else if (round % 5 == 0 || round % 3 == 0)
+                {
+                    return 3;
+                }
+                else
+                {
+                    return 1;
+                }
+            }
+            bool CannonDamage2(int shot, int distance)
+            {
+                if (shot == distance)
+                {
+                    Console.WriteLine("That round was a direct HIT!");
+                    return true;
+                }
+                else if (shot < distance)
+                {
+                    Console.WriteLine("That round FELL SHORT of the target.");
+                    return false;
+                }
+                else
+                {
+                    Console.WriteLine("That round OVERSHOT the target.");
+                    return false;
+                }
+            }
+
+
+
+            int manticoreHealth = 10;
+            int cityHealth = 15;
+            int distance;
+            while (true)
+            {
+                Console.Write("Player 1, how far away from the city do you want to station the Manticore? ");
+                distance = Convert.ToInt32(Console.ReadLine());
+                if (distance > 0 && distance < 100)
+                {
+                    Console.Clear();
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Input between 0 and 100!!!");
+                }
+            }
+            Console.WriteLine("Player 2, it is your turn.");
+            int round = 1;
+            while (manticoreHealth != 0 && cityHealth != 0)
+            {
+                Console.WriteLine("=======================================");
+
+                Console.WriteLine($"STATUS: Round: {round} City: {cityHealth}/15 Manticore: {manticoreHealth}/10");
+                Console.WriteLine($"The cannon is expected to deal {CannonDamage(round)} damage this round.");
+                Console.Write("Enter desired cannon range: ");
+                int input = Convert.ToInt32(Console.ReadLine());
+                var directHit = CannonDamage2(input, distance);
+
+
+
+                if (directHit)
+                {
+                    manticoreHealth -= CannonDamage(round);
+                }
+                cityHealth--;
+                if (manticoreHealth <= 0)
+                {
+                    Console.WriteLine("The manticore has been destroyed! The city of Consolas have been saved!");
+                    break;
+                }
+                if (cityHealth <= 0)
+                {
+                    Console.WriteLine("The Uncoded One has eradicated this city and massacred its citizen. You lose");
+                    break;
+                }
+
+                round++;
+            }
+
+        }
+
+        public static void _028_KnowledgeCheckObjects()
+        {
+            Question2("What two things does an object bundle together? ", " Datas and their methods");
+            Question("C# lets you define new types of objects? ", 1);
+        }
+        enum _029_ChestState { Open, Closed, Locked }
+
+        public static void _029_SimulaTest()
+        {
+            int statusOpen = (int)_029_ChestState.Open;
+            int statusClosed = (int)_029_ChestState.Closed;
+            int statusLocked = (int)_029_ChestState.Locked;
+
+            string message="";
+            int counter=0;
+            _029_ChestState meong= _029_ChestState.Locked;
+            
+
+            while (true){
+                if (meong == _029_ChestState.Locked)
+                {
+                    counter = statusLocked;
+                    message = "The chest is locked. What do you want to do? ";
+                }
+                else if (meong == _029_ChestState.Open)
+                {
+                    counter = statusOpen;
+
+                    message = "The chest is open. What do you want to do? ";
+
+                }
+                else if (meong == _029_ChestState.Closed)
+                {
+                    counter = statusClosed;
+
+                    message = "The chest is closed. What do you want to do? ";
+
+                }
+                Console.Write(message);
+                string choice = Console.ReadLine();
+                if (counter == 0)
+                {
+                    if(choice =="close")
+                    {
+                        meong= _029_ChestState.Closed;
+                    }
+                    else
+                    {
+                        Console.WriteLine("You fail");
+                        Console.WriteLine("Only input close!");
+                        break;
+                    }
+                }else if (counter == 1)
+                {
+                    if (choice == "lock")
+                    {
+                        meong = _029_ChestState.Locked;
+                    }
+                    else if (choice == "open")
+                    {
+                        meong = _029_ChestState.Open;
+                    }
+                    else
+                    {
+                        Console.WriteLine("You fail");
+                        Console.WriteLine("Only input open or lock!");
+                        break;
+                    }
+                }else if(counter == 2)
+                {
+                    if (choice == "unlock")
+                    {
+                        meong = _029_ChestState.Closed;
+                    }
+                    else
+                    {
+                        Console.WriteLine("You fail");
+                        Console.WriteLine("Only input unlock!");
+                        break;
+                    }
+                }
+
+            }
+
+        }
+
+
+
+
     }
 }
