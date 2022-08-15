@@ -30,4 +30,4 @@ using static csharpplayerguide.Part1TheBasics;
 //_026_KnowledgeCheckMemory();
 //_027_HuntingTheManticore();
 //_028_KnowledgeCheckObjects();
-_029_SimulaTest();
+//_029_SimulaTest();
