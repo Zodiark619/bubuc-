@@ -582,12 +582,14 @@ namespace csharpplayerguide
             int statusClosed = (int)_029_ChestState.Closed;
             int statusLocked = (int)_029_ChestState.Locked;
 
-            string message="";
-            int counter=0;
-            _029_ChestState meong= _029_ChestState.Locked;
-            
+            //initialization for patient zero
+            string message = "";
+            int counter = 0;
+            _029_ChestState meong = _029_ChestState.Locked;
 
-            while (true){
+            //putting meong here won't update chest state
+
+            while (true) {
                 if (meong == _029_ChestState.Locked)
                 {
                     counter = statusLocked;
@@ -611,9 +613,9 @@ namespace csharpplayerguide
                 string choice = Console.ReadLine();
                 if (counter == 0)
                 {
-                    if(choice =="close")
+                    if (choice == "close")
                     {
-                        meong= _029_ChestState.Closed;
+                        meong = _029_ChestState.Closed;
                     }
                     else
                     {
@@ -621,7 +623,7 @@ namespace csharpplayerguide
                         Console.WriteLine("Only input close!");
                         break;
                     }
-                }else if (counter == 1)
+                } else if (counter == 1)
                 {
                     if (choice == "lock")
                     {
@@ -637,7 +639,7 @@ namespace csharpplayerguide
                         Console.WriteLine("Only input open or lock!");
                         break;
                     }
-                }else if(counter == 2)
+                } else if (counter == 2)
                 {
                     if (choice == "unlock")
                     {
@@ -654,9 +656,265 @@ namespace csharpplayerguide
             }
 
         }
+        enum _030_type { Soup = 1, Stew, Gumbo }
+        enum _030_MainIngredient { Mushrooms = 1, Chicken, Carrots, Potatoes }
+        enum _030_Seasoning { Spicy = 1, Salty, Sweet }
+
+        public static void _030_SimulaSoup()
+        {
+            /*_030_type type;
+            _030_MainIngredient mainIngredient;
+            _030_Seasoning seasoning;*/
+            (_030_type, _030_MainIngredient, _030_Seasoning) meong;
+            Console.WriteLine("Pick a number based on this list!");
+
+            Console.WriteLine("Types:");
+            Console.WriteLine("1 - Soup");
+            Console.WriteLine("2 - Stew");
+            Console.WriteLine("3 - Gumbo");
+            int typeInput = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Main Ingredients:");
+            Console.WriteLine("1 - Mushrooms");
+            Console.WriteLine("2 - Chicken");
+            Console.WriteLine("3 - Carrots");
+            Console.WriteLine("4 - Potatoes");
+            int mainIngredientInput = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Seasoning:");
+            Console.WriteLine("1 - Spicy");
+            Console.WriteLine("2 - Salty");
+            Console.WriteLine("3 - Sweet");
+
+            int seasoningInput = Convert.ToInt32(Console.ReadLine());
+            meong = ((_030_type)typeInput, (_030_MainIngredient)mainIngredientInput, (_030_Seasoning)seasoningInput);
+            Console.WriteLine($"Your result is= {meong.Item3} {meong.Item2} {meong.Item1}");
+        }
+
+        enum _031_arrowheads { Steel=1, Wood, Obsidian }
+        enum _031_fletching { Plastic=1, Turkeyfeathers, Goosefeathers }
+        class _031_Arrow
+        {
+            
+            private int arrowheads;
+            private int fletching;
+            private  float length;
+
+            
+            public _031_Arrow(int a, int b, float c)
+            {
+                this.arrowheads = a;
+                this.fletching = b;
+                this.length = c;
+
+            }
+            public  float GetCost()
+            {
+                float total = 0f;
+                if(this.arrowheads == 1)
+                {
+                    total += 10;
+                }
+                else if (this.arrowheads == 2)
+                {
+                    total += 3;
+                }
+                else if (this.arrowheads == 3)
+                {
+                    total += 5;
+                }
+                if (this.fletching == 1)
+                {
+                    total += 10;
+                }
+                else if (this.fletching == 2)
+                {
+                    total += 5;
+                }
+                else if (this.fletching == 3)
+                {
+                    total += 3;
+                }
+                total += length * 0.05f;
+                return total;
+            }
+        }
+        public static void _031_VinFletcherArrows()
+        {
+            Console.WriteLine("Pick a number from list below based on what arrow you would like to make");
+            Console.WriteLine("Arrowhead types");
+
+            Console.WriteLine($"1 - {_031_arrowheads.Steel} 10 golds");
+            Console.WriteLine($"2 - {_031_arrowheads.Wood} 3 golds");
+
+            Console.WriteLine($"3 - {_031_arrowheads.Obsidian} 5 golds");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Fletching types");
+
+            Console.WriteLine($"1 - {_031_fletching.Plastic} 10 golds");
+            Console.WriteLine($"2 - {_031_fletching.Turkeyfeathers} 5 golds");
+            Console.WriteLine($"3 - {_031_fletching.Goosefeathers} 3 golds");
+            int b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Input arrow length (betweem 60 to 100 centimeters, 0.05 gold each)");
+            int c = Convert.ToInt32(Console.ReadLine());
+            _031_Arrow susu = new _031_Arrow(a,b,c);
+            Console.WriteLine($"Total cost would be: {susu.GetCost()} golds");
+            
+
+        }
+        enum _032_arrowheads { Steel = 1, Wood, Obsidian }
+        enum _032_fletching { Plastic = 1, Turkeyfeathers, Goosefeathers }
+        class _032_Arrow
+        {
+
+            private int arrowheads;
+            private int fletching;
+            private float length;
 
 
+            public _032_Arrow(int a, int b, float c)
+            {
+                this.arrowheads = a;
+                this.fletching = b;
+                this.length = c;
+
+            }
+
+            public int GetArrowheads() => arrowheads;
+            public int GetFletching() => fletching;
+            public float GetLength() => length;
+
+            public float GetCost()
+            {
+                float total = 0f;
+                if (this.arrowheads == 1)
+                {
+                    total += 10;
+                }
+                else if (this.arrowheads == 2)
+                {
+                    total += 3;
+                }
+                else if (this.arrowheads == 3)
+                {
+                    total += 5;
+                }
+                if (this.fletching == 1)
+                {
+                    total += 10;
+                }
+                else if (this.fletching == 2)
+                {
+                    total += 5;
+                }
+                else if (this.fletching == 3)
+                {
+                    total += 3;
+                }
+                total += length * 0.05f;
+                return total;
+            }
+        }
+        public static void _032_VinTrouble()
+        {
+            _032_Arrow susu = new _032_Arrow(1,1,60);
+            _032_arrowheads meong1 = (_032_arrowheads)susu.GetArrowheads();
+            _032_fletching meong2 = (_032_fletching)susu.GetFletching();
+            Console.WriteLine($"Arrowhead= {meong1}");
+            Console.WriteLine($"Fletching= {meong2}");
+            Console.WriteLine($"Length= {susu.GetLength()}");
+        }
 
 
+        enum _033_arrowheads { Steel = 1, Wood, Obsidian }
+        enum _033_fletching { Plastic = 1, Turkeyfeathers, Goosefeathers }
+        class _033_Arrow
+        {
+
+            private int arrowheads;
+            private int fletching;
+            private float length;
+
+
+            public _033_Arrow()
+            {
+                this.arrowheads = 1;
+                this.fletching = 1;
+                this.length =60;
+            }
+            public _033_Arrow(int a, int b, float c)
+            {
+                this.arrowheads = a;
+                this.fletching = b;
+                this.length = c;
+
+            }
+
+            public int Arrowheads{ get;set;}
+            public int Fletching { get; set; }
+            public float Length {
+                get => length;
+                set
+                {
+                    if (value < 60 || value > 100)
+                    {
+                        Console.WriteLine("Arrow length must be between 60 and 100 cm!");
+                        Console.WriteLine("Arrow length will become 60 by default");
+                    }
+                    else
+                    {
+                        length = value;
+                    }
+                     } 
+                }
+
+
+            public float GetCost()
+            {
+                float total = 0f;
+                if (this.arrowheads == 1)
+                {
+                    total += 10;
+                }
+                else if (this.arrowheads == 2)
+                {
+                    total += 3;
+                }
+                else if (this.arrowheads == 3)
+                {
+                    total += 5;
+                }
+                if (this.fletching == 1)
+                {
+                    total += 10;
+                }
+                else if (this.fletching == 2)
+                {
+                    total += 5;
+                }
+                else if (this.fletching == 3)
+                {
+                    total += 3;
+                }
+                total += length * 0.05f;
+                return total;
+            }
+        }
+        public static void _033_ThePropertiesOfArrow()
+        {
+            _033_Arrow susu = new _033_Arrow
+            {
+                Arrowheads=2,Fletching=2,Length=14
+            };
+            _033_arrowheads meong1 = (_033_arrowheads)susu.Arrowheads;
+            _033_fletching meong2 = (_033_fletching)susu.Fletching;
+            Console.WriteLine($"Arrowhead= {meong1}");
+            Console.WriteLine($"Fletching= {meong2}");
+            Console.WriteLine($"Length= {susu.Length}");
+        }
+
+
+        public static void _034_ArrowFactories()
+        {
+
+        }
     }
 }

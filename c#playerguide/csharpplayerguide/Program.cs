@@ -31,3 +31,8 @@ using static csharpplayerguide.Part1TheBasics;
 //_027_HuntingTheManticore();
 //_028_KnowledgeCheckObjects();
 //_029_SimulaTest();
+//_030_SimulaSoup();
+//_031_VinFletcherArrows();
+//_032_VinTrouble();
+//_033_ThePropertiesOfArrow();
+_034_ArrowFactories();
