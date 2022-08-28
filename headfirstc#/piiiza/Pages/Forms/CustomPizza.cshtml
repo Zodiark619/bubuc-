@@ -1,0 +1,36 @@
+﻿@page
+@model piiiza.Pages.Forms.CustomPizzaModel
+@{
+}
+
+
+
+<div class="text-center container">
+	<h1>Create owwonwn piza</h1>
+	<form method="post" class="mx-auto mt-5 mb-5 px-5 pt-5 pb-5 rounded-5 alert-light col-4">
+
+		<input type="text" asp-for="Pizza.PizzaName" placeholder="give piassza name"/>
+		<br />
+
+		<input type="checkbox" asp-for="Pizza.TomatoSauce" placeholder="TomatoSauce" />Totototmaa
+		<br />
+		<input type="checkbox" asp-for="Pizza.Cheese" placeholder="Cheese" />chese
+		<br />
+		<input type="checkbox" asp-for="Pizza.Peperoni" placeholder="Peperoni" />peperno
+		<br />
+		<input type="checkbox" asp-for="Pizza.Mushroom" placeholder="Mushroom" />mumuss
+		<br />
+		<input type="checkbox" asp-for="Pizza.Tuna" placeholder="Tuna" />ttutun
+		<br />
+		<input type="checkbox" asp-for="Pizza.Pineapple" placeholder="Pineapple" />pinaeneapap
+		<br />
+		<input type="checkbox" asp-for="Pizza.Ham" placeholder="Ham" />jhham
+		<br />
+		<input type="checkbox" asp-for="Pizza.Beef" placeholder="Beef" />beef
+		<br />
+		
+
+
+		<button class="btn btn-primary mt-1" type="submit">Orrrder my apisipiza </button>
+	</form>
+</div>

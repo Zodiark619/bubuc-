@@ -1,0 +1,206 @@
+﻿
+@page "/azurLane1"
+
+<h3>AzurLaneGachaSimulator</h3>
+<PageTitle>@title</PageTitle>
+
+
+
+<button @onclick="Gacha1">1x Pull (10 crystals)</button>
+<button @onclick="Gacha10">10x Pull (90 crystals)</button>
+
+<ul>
+	@for(int a = 0; a < meong.Count; a++)
+	{
+		if (meong1[a] <= 10)
+		{
+			<li><span style="text-decoration:blink">Congratulations!!!!!</span> @meong[a] (Drop rate: @meong1[a]%)</li>
+		}
+		else
+		{
+			<li>@meong[a] (Drop rate: @meong1[a]%)</li>
+
+		}
+	}
+
+	
+		
+
+	
+</ul>
+
+@{
+	if (spent < 1000)
+	{
+		<h1>You have spent: @spent crystals</h1>
+
+	}else 
+	{
+	<h1>You have spent: @spent crystals (Please stop)</h1>
+		
+	}
+
+
+
+}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@code {
+	private string title = "AzurLane1";
+
+	private double spent ;
+	List<string> meong = new();
+	List<float> meong1 = new();
+
+
+	List<string> normalGachaItem = new List<string>()
+	{
+		"Gray equipment coupon x1",
+		"100 golds",
+		"1 decoration point",
+		"Random normal rarity ship",
+		"2 sodas",
+		"10 oils"
+	};
+	List<string> rareGachaItem = new List<string>()
+	{
+		"Blue equipment coupon x1",
+		"400 golds",
+		"3 decoration point",
+		"Random rare rarity ship",
+		"Rare ship coupon x1",
+		"7 sodas",
+		"50 oils"
+	};
+	List<string> legendaryGachaItem = new List<string>()
+	{
+		"5 crystals",
+		"Gold equipment coupon x1",
+		"2500 golds",
+		"25 decoration point",
+		"Random super rare rarity ship",
+		"Super Rare ship coupon x1",
+		"50 sodas",
+		"500 oils",
+		"Priority Ship coupon x1",
+		"Enterprise x1",
+		"Illustrious x1",
+		"Bismarck x1"
+
+	};
+	List<string> epicGachaItem = new List<string>()
+	{
+		"Purple equipment coupon x1",
+		"1000 golds",
+		"10 decoration point",
+		"Random elite rarity ship",
+		"elite ship coupon x1",
+		"15 sodas",
+		"200 oils"
+	};
+
+
+	private void Gacha10()
+	{
+		meong.Clear();
+		meong1.Clear();
+		Random random = new Random();
+
+
+		for (int i = 0; i < 10; i++) 
+		{
+		int chance = random.Next(100000);
+
+
+
+			if (chance < 500)
+			{
+				int gachaChance = random.Next(legendaryGachaItem.Count);
+				meong.Add(legendaryGachaItem[gachaChance]);
+				meong1.Add((float)chance / 1000);
+			}
+			else if (chance < 5000)
+			{
+				int gachaChance = random.Next(epicGachaItem.Count);
+				meong.Add(epicGachaItem[gachaChance]);
+				meong1.Add((float)chance / 1000);
+
+			}
+			else if (chance < 30000)
+			{
+				int gachaChance = random.Next(rareGachaItem.Count);
+				meong.Add(rareGachaItem[gachaChance]);
+				meong1.Add((float)chance / 1000);
+
+			}
+			else
+			{
+				int gachaChance = random.Next(normalGachaItem.Count);
+				meong.Add(normalGachaItem[gachaChance]);
+				meong1.Add((float)chance / 1000);
+
+			}
+		}
+		spent += 90;
+	}
+	private void Gacha1()
+	{
+		meong.Clear();
+
+		meong1.Clear();
+		Random random = new Random();
+
+		for (int i = 0; i < 1; i++)
+		{
+		int chance = random.Next(100000);
+
+
+
+			if (chance < 500)
+			{
+				int gachaChance = random.Next(legendaryGachaItem.Count);
+				meong.Add(legendaryGachaItem[gachaChance]);
+				meong1.Add((float)chance / 1000);
+			}
+			else if (chance < 5000)
+			{
+				int gachaChance = random.Next(epicGachaItem.Count);
+				meong.Add(epicGachaItem[gachaChance]);
+				meong1.Add((float)chance / 1000);
+
+			}
+			else if (chance < 30000)
+			{
+				int gachaChance = random.Next(rareGachaItem.Count);
+				meong.Add(rareGachaItem[gachaChance]);
+				meong1.Add((float)chance / 1000);
+
+			}
+			else
+			{
+				int gachaChance = random.Next(normalGachaItem.Count);
+				meong.Add(normalGachaItem[gachaChance]);
+				meong1.Add((float)chance / 1000);
+
+			}
+		}
+
+		spent += 10;
+		
+	}
+
+
+}

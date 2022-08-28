@@ -1,0 +1,32 @@
+﻿@page
+@model piiiza.Pages.OOOrderModel
+@{
+}
+
+
+<h1>Meongngkisandaskjd</h1>
+
+<hr />
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Bijasjas name</th>
+			<th>pprice</th>
+
+		</tr>
+	</thead>
+	<tbody>
+
+		@foreach(var i in Model.mumu){
+		<tr>
+			<td>@i.Id</td>
+			<td>@i.PizzaName</td>
+			<td>@i.BasePrice</td>
+
+		</tr>
+		}
+		
+	</tbody>
+</table>
