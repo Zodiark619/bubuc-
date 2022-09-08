@@ -15,5 +15,7 @@ namespace MVCBaba.Data
         }
 
         public DbSet<MVCBaba.Models.Book> Book { get; set; } = default!;
+
+        public DbSet<MVCBaba.Models.Witcher3CheckList>? Witcher3CheckList { get; set; }
     }
 }
