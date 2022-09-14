@@ -9,8 +9,9 @@ using Microsoft.Extensions.Logging;
 
 namespace Catalog.API.Controllers
 {
-    [Route("api/v1/[controller]")]
+    // docker-compose -f .\docker-compose.yml -f .\docker-compose.override.yml up -d
     [ApiController]
+    [Route("api/v1/[controller]")]
     public class CatalogController : ControllerBase
     {
         private readonly IProductRepository _repository;
@@ -74,7 +75,7 @@ namespace Catalog.API.Controllers
             return Ok(await _repository.UpdateProduct(product));
         }
 
-        [HttpDelete("{id:length(24)",Name ="DeleteProduct")]
+        [HttpDelete("{id:length(24)}",Name ="DeleteProduct")]
         [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> DeleteProduct(string id)
         {
